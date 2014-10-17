@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f81ca937-db28-4ae4-b1ce-c2e47f5c5c58" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/core/BreakoutBoard.java" afterPath="$PROJECT_DIR$/src/game/core/BreakoutBoard.java" />
-    </list>
+    <list default="true" id="f81ca937-db28-4ae4-b1ce-c2e47f5c5c58" name="Default" comment="" />
     <ignored path="JG_Breakout.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,8 +68,8 @@
           <file leaf-file-name="BreakoutBoard.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/game/core/BreakoutBoard.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.6802325" vertical-offset="0" max-vertical-offset="2244">
-                  <caret line="102" column="35" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
+                <state vertical-scroll-proportion="-0.19767442" vertical-offset="1190" max-vertical-offset="2244">
+                  <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#checkCollisions#0;class#BreakoutBoard#0" expanded="false" />
@@ -643,8 +641,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/core/BreakoutBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6802325" vertical-offset="0" max-vertical-offset="2244">
-          <caret line="102" column="35" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
+        <state vertical-scroll-proportion="-0.19767442" vertical-offset="1190" max-vertical-offset="2244">
+          <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#checkCollisions#0;class#BreakoutBoard#0" expanded="false" />
