@@ -86,6 +86,18 @@ public class BreakoutBoard extends JPanel implements ActionListener {
         Rectangle ballPos = theBall.getBounds();
         Rectangle paddlePos = thePaddle.getBounds();
 
+        for(int i = 0; i < bricks.size(); i++) {
+            brick b = (brick) bricks.get(i);
+            if (b.visible){
+                Rectangle ab = b.getBounds();
+                if(ballPos.intersects(ab)){
+                    b.visible = false;
+
+                }
+            }
+
+        }
+
         if(ballPos.intersects(paddlePos)){
             theBall.changeDirection(thePaddle.getXDirection(), -theBall.speed);
         }
