@@ -32,13 +32,14 @@ public class BreakoutBoard extends JPanel implements ActionListener {
 
     public BreakoutBoard(){
 
+        //this is the function that checks which key is pressed
         addKeyListener(new TAdapter());
         setFocusable(true);
         setBackground(Color.white);
         setDoubleBuffered(true);
         setSize(B_WIDTH, B_HEIGHT);
 
-        initBricks();
+        initBricks();  //sets up the bricks
         thePaddle = new paddle();
         theBall = new Ball();
         timer = new Timer(5, this);
@@ -53,15 +54,18 @@ public class BreakoutBoard extends JPanel implements ActionListener {
         }
     }
 
+    /*
+    This function does all of the drawing
+     */
     public void paint(Graphics g) {
         super.paint(g);
-
+        //set up the Graphics2d object and draw the paddle
         Graphics2D g2d = (Graphics2D) g;
-
         g2d.drawImage(thePaddle.getThePaddle(), thePaddle.getX(), thePaddle.getY(), null);
         g2d.setColor(Color.red);
         g2d.fill(theBall.getBall());
 
+        //set up the bricks and draw a border around them
         for(int i = 0; i < bricks.size(); i++){
             brick b = (brick) bricks.get(i);
             if(b.visible){
@@ -72,7 +76,7 @@ public class BreakoutBoard extends JPanel implements ActionListener {
                g2d.drawRect(b.getX(), b.getY(), b.width, b.height);
             }
         }
-        //Debuggging
+        //Debuggging - draws a ball tracker on the screen
         g2d.setColor(Color.black);
         g2d.drawString("X: " +  String.valueOf(theBall.getX()), 5, 15);
         g2d.drawString("Y: " + String.valueOf(theBall.getY()), 5, 30);
@@ -80,14 +84,22 @@ public class BreakoutBoard extends JPanel implements ActionListener {
         g.dispose();
     }
 
+    /*
+    This function listens for an actionEvent - such as a timer tick
+    and tells the objects that can move, to move.
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         thePaddle.Move();
         theBall.Move();
         checkCollisions();
-        repaint();
+        repaint(); //This function presumably calls the paint function to redraw the gameObjects
     }
 
+    /*
+    This function does all the calculations for when the ball hit's a brick or the paddle
+    It changes the direction of the ball based on that
+     */
     private void checkCollisions() {
         Rectangle ballPos = theBall.getBounds();
         Rectangle paddlePos = thePaddle.getBounds();
@@ -118,7 +130,7 @@ public class BreakoutBoard extends JPanel implements ActionListener {
             }
 
         }
-
+        //Check if the ball hit the paddle
         if(ballPos.intersects(paddlePos)){
             theBall.changeDirection(thePaddle.getXDirection(), -theBall.speed);
         }
@@ -133,7 +145,7 @@ public class BreakoutBoard extends JPanel implements ActionListener {
             theBall.changeDirection(-theBall.speed, theBall.getYDirection());
         }
 
-        //FOR DEBUGGGING
+        //FOR DEBUGGGING - This always returns the ball into play
         if(theBall.getY() >= B_HEIGHT){
             theBall.changeDirection(0,-1);
         }
@@ -147,6 +159,10 @@ public class BreakoutBoard extends JPanel implements ActionListener {
         B_HEIGHT = getHeight();
     }
 
+    /*
+    This is the class that passed the key presses into the paddle
+    it is hooked up to the addkeyListener() function
+     */
     private class TAdapter extends KeyAdapter {
 
         public void keyReleased(KeyEvent e) {
