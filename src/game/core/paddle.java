@@ -12,6 +12,8 @@ public class paddle extends gameObject {
     private String thePaddle = "paddle.png";
     private Image image;
 
+
+
     public paddle(){
         ImageIcon ii = new ImageIcon(this.getClass().getResource(thePaddle));
         image = ii.getImage();
@@ -19,6 +21,7 @@ public class paddle extends gameObject {
         locationY = 600;
         width = image.getWidth(null);
         height = image.getHeight(null);
+        speed = 3;
 
     }
 

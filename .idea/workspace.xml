@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f81ca937-db28-4ae4-b1ce-c2e47f5c5c58" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/core/Ball.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/core/gameObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/core/Application.java" afterPath="$PROJECT_DIR$/src/game/core/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/core/BreakoutBoard.java" afterPath="$PROJECT_DIR$/src/game/core/BreakoutBoard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/core/paddle.java" afterPath="$PROJECT_DIR$/src/game/core/paddle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JG_Breakout.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,11 +67,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.6185759">
       <split-first>
         <leaf>
-          <file leaf-file-name="BreakoutBoard.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="BreakoutBoard.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/game/core/BreakoutBoard.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.49253732" vertical-offset="795" max-vertical-offset="1853">
-                  <caret line="72" column="64" selection-start-line="72" selection-start-column="64" selection-end-line="72" selection-end-column="64" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="982" max-vertical-offset="1853">
+                  <caret line="55" column="40" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#2578#2579#0" expanded="true" />
@@ -120,15 +115,15 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="paddle.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="paddle.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/game/core/paddle.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="1037">
-                  <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+                <state vertical-scroll-proportion="0.4098737" vertical-offset="153" max-vertical-offset="1088">
+                  <caret line="32" column="34" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#607#608#0" expanded="true" />
-                    <element signature="e#640#641#0" expanded="true" />
+                    <element signature="e#628#629#0" expanded="true" />
+                    <element signature="e#661#662#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -141,12 +136,12 @@
           <file leaf-file-name="paddle.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/game/core/paddle.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="1037">
-                  <caret line="23" column="44" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="166" max-vertical-offset="1088">
+                  <caret line="26" column="44" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#607#608#0" expanded="true" />
-                    <element signature="e#640#641#0" expanded="true" />
+                    <element signature="e#628#629#0" expanded="true" />
+                    <element signature="e#661#662#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -180,11 +175,11 @@
         <option value="$PROJECT_DIR$/src/game/core/padel.java" />
         <option value="$PROJECT_DIR$/src/gameArea.form" />
         <option value="$PROJECT_DIR$/src/game/core/theBall.java" />
-        <option value="$PROJECT_DIR$/src/game/core/paddle.java" />
         <option value="$PROJECT_DIR$/src/game/core/Application.java" />
         <option value="$PROJECT_DIR$/src/game/core/Ball.java" />
         <option value="$PROJECT_DIR$/src/game/core/BreakoutBoard.java" />
         <option value="$PROJECT_DIR$/src/game/core/gameObject.java" />
+        <option value="$PROJECT_DIR$/src/game/core/paddle.java" />
       </list>
     </option>
   </component>
@@ -589,18 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/core/paddle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="1037">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#640#641#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/core/Ball.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
@@ -625,14 +608,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/core/BreakoutBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49253732" vertical-offset="795" max-vertical-offset="1853">
-          <caret line="72" column="64" selection-start-line="72" selection-start-column="64" selection-end-line="72" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1853">
+          <caret line="55" column="40" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2578#2579#0" expanded="true" />
             <element signature="e#2626#2627#0" expanded="true" />
             <element signature="e#2672#2673#0" expanded="true" />
             <element signature="e#2719#2720#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/core/paddle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4098737" vertical-offset="153" max-vertical-offset="1088">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
           </folding>
         </state>
       </provider>
