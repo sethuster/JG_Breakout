@@ -15,7 +15,7 @@ public class Application extends JFrame {
     private void initUI() {
         add(new BreakoutBoard());
 
-        setSize(new Dimension(1000, 800));
+        setSize(800, 650);
         setBackground(Color.black);
         setTitle("Breakout!");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

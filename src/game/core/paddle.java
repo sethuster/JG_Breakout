@@ -7,20 +7,18 @@ import java.awt.event.KeyEvent;
 /**
  * Created by Seth on 10/16/2014.
  */
-public class paddle {
+public class paddle extends gameObject {
 
     private String thePaddle = "paddle.png";
     private Image image;
-
-    private int directionX;
-    private int locationX;
-    private int locationY;
 
     public paddle(){
         ImageIcon ii = new ImageIcon(this.getClass().getResource(thePaddle));
         image = ii.getImage();
         locationX = 300;
         locationY = 600;
+        width = image.getWidth(null);
+        height = image.getHeight(null);
 
     }
 
@@ -28,24 +26,22 @@ public class paddle {
         return image;
     }
 
-    public void movePaddle(){
+    public int getXDirection(){
+        return directionX;
+    }
+    @Override
+    public void Move(){
         locationX += directionX;
-    }
-    public int getX(){
-        return locationX;
-    }
-    public int getY(){
-        return locationY;
     }
 
     public void keyPressed(KeyEvent k){
         int key = k.getKeyCode();
 
         if(key == KeyEvent.VK_LEFT){
-            directionX = -1;
+            directionX = -speed;
         }
         if(key == KeyEvent.VK_RIGHT){
-            directionX = +1;
+            directionX = +speed;
         }
     }
     public void keyReleased(KeyEvent k){
