@@ -19,6 +19,7 @@ public class brick extends gameObject{
         width = 100;
         height = 25;
 
+
         colors = new ArrayList();
         colors.add(Color.red);
         colors.add(Color.blue);
@@ -42,5 +43,7 @@ public class brick extends gameObject{
     public Color getColor(){
         return brickColor;
     }
+
+
 
 }

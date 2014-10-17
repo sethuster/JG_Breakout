@@ -24,7 +24,9 @@ public class BreakoutBoard extends JPanel implements ActionListener {
     private ArrayList bricks;
 
     private int[][] brickPos = {
-            {0, 100},{100, 100},{200,100},{300,100},{400,100},{500,100},{600,100},{700,100}
+            {0, 100},{100, 100},{200,100},{300,100},{400,100},{500,100},{600,100},{700,100},
+            {50, 125},{150, 125},{250, 125},{350, 125} ,{450, 125},{550, 125},{650, 125},
+            {100, 150},{200, 150},{300, 150},{400, 150},{500, 150},{600, 150}
     };
 
     public BreakoutBoard(){
@@ -64,6 +66,9 @@ public class BreakoutBoard extends JPanel implements ActionListener {
             if(b.visible){
                g2d.setColor(b.getColor());
                g2d.fill(b.getBounds());
+               g2d.setStroke(new BasicStroke(1));
+               g2d.setColor(Color.black);
+               g2d.drawRect(b.getX(), b.getY(), b.width, b.height);
             }
         }
         //Debuggging
@@ -92,7 +97,22 @@ public class BreakoutBoard extends JPanel implements ActionListener {
                 Rectangle ab = b.getBounds();
                 if(ballPos.intersects(ab)){
                     b.visible = false;
-
+                    //Now we have to change direction based on the ball position
+                    //check below
+                    if(theBall.getY() >= b.getY()){
+                        theBall.changeDirection(theBall.getXDirection(), -theBall.getYDirection());
+                    }
+                    //checkabove
+                    if(theBall.getY() <= (b.getY()) ){
+                        theBall.changeDirection(theBall.getXDirection(), -theBall.getYDirection());
+                    }
+                    //check the sides
+                    if(theBall.getX() >= (b.getX()+b.width)){
+                        theBall.changeDirection(+theBall.getYDirection(), theBall.getYDirection());
+                    }
+                    if(theBall.getX() <= b.getX()){
+                        theBall.changeDirection(-theBall.getXDirection(), theBall.getYDirection());
+                    }
                 }
             }
 
