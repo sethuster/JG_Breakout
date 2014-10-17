@@ -23,6 +23,7 @@ public class BreakoutBoard extends JPanel implements ActionListener {
     private Ball theBall;
     private ArrayList bricks;
 
+    //This sets where the blocks will be created
     private int[][] brickPos = {
             {0, 100},{100, 100},{200,100},{300,100},{400,100},{500,100},{600,100},{700,100},
             {50, 125},{150, 125},{250, 125},{350, 125} ,{450, 125},{550, 125},{650, 125},
