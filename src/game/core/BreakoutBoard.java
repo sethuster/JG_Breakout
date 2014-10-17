@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 
 
 /**
@@ -20,6 +21,11 @@ public class BreakoutBoard extends JPanel implements ActionListener {
     private Timer timer;
     private paddle thePaddle;
     private Ball theBall;
+    private ArrayList bricks;
+
+    private int[][] brickPos = {
+            {0, 100},{100, 100},{200,100},{300,100},{400,100},{500,100},{600,100},{700,100}
+    };
 
     public BreakoutBoard(){
 
@@ -29,10 +35,19 @@ public class BreakoutBoard extends JPanel implements ActionListener {
         setDoubleBuffered(true);
         setSize(B_WIDTH, B_HEIGHT);
 
+        initBricks();
         thePaddle = new paddle();
         theBall = new Ball();
         timer = new Timer(5, this);
         timer.start();
+    }
+
+    public void initBricks(){
+        bricks = new ArrayList();
+
+        for(int i = 0; i < brickPos.length; i++){
+            bricks.add(new brick(brickPos[i][0], brickPos[i][1]));
+        }
     }
 
     public void paint(Graphics g) {
@@ -43,6 +58,15 @@ public class BreakoutBoard extends JPanel implements ActionListener {
         g2d.drawImage(thePaddle.getThePaddle(), thePaddle.getX(), thePaddle.getY(), null);
         g2d.setColor(Color.red);
         g2d.fill(theBall.getBall());
+
+        for(int i = 0; i < bricks.size(); i++){
+            brick b = (brick) bricks.get(i);
+            if(b.visible){
+               g2d.setColor(b.getColor());
+               g2d.fill(b.getBounds());
+            }
+        }
+        //Debuggging
         g2d.setColor(Color.black);
         g2d.drawString("X: " +  String.valueOf(theBall.getX()), 5, 15);
         g2d.drawString("Y: " + String.valueOf(theBall.getY()), 5, 30);
