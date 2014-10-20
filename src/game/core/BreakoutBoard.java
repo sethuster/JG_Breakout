@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.geom.Ellipse2D;
 import java.util.ArrayList;
 
 
@@ -22,6 +23,7 @@ public class BreakoutBoard extends JPanel implements ActionListener {
     private paddle thePaddle;
     private Ball theBall;
     private ArrayList bricks;
+    private Lives theLives;
 
     //This sets where the blocks will be created
     private int[][] brickPos = {
@@ -42,6 +44,7 @@ public class BreakoutBoard extends JPanel implements ActionListener {
         initBricks();  //sets up the bricks
         thePaddle = new paddle();
         theBall = new Ball();
+        theLives = new Lives();
         timer = new Timer(5, this);
         timer.start();
     }
@@ -62,6 +65,7 @@ public class BreakoutBoard extends JPanel implements ActionListener {
         //set up the Graphics2d object and draw the paddle
         Graphics2D g2d = (Graphics2D) g;
         g2d.drawImage(thePaddle.getThePaddle(), thePaddle.getX(), thePaddle.getY(), null);
+        //setup the ball
         g2d.setColor(Color.red);
         g2d.fill(theBall.getBall());
 
@@ -76,6 +80,18 @@ public class BreakoutBoard extends JPanel implements ActionListener {
                g2d.drawRect(b.getX(), b.getY(), b.width, b.height);
             }
         }
+        //setup the lives
+        for(int i = 0; i < theLives.LivesLeft(); i++){
+            g2d.setColor(theLives.getColor());
+            Ellipse2D.Double newLife = theLives.getaLife(i);
+            g2d.fill(newLife);
+            g2d.setColor(Color.black);
+            g2d.setStroke(new BasicStroke(3));
+            g2d.drawOval((int) newLife.x, (int) newLife.y, (int) newLife.height, (int) newLife.width);
+        }
+        g2d.drawString("Lives: ", theLives.LivesTextPOS(), 25);
+
+
         //Debuggging - draws a ball tracker on the screen
         g2d.setColor(Color.black);
         g2d.drawString("X: " +  String.valueOf(theBall.getX()), 5, 15);
