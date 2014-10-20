@@ -27,6 +27,7 @@ public class Lives extends gameObject {
     }
 
     private void CreateLives(){
+        theLives.clear();
         int fromSide = 800;
         for(int i = 0; i < numLives; i++){
             Life aLife = new Life();

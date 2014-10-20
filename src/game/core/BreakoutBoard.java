@@ -164,6 +164,7 @@ public class BreakoutBoard extends JPanel implements ActionListener {
         //FOR DEBUGGGING - This always returns the ball into play
         if(theBall.getY() >= B_HEIGHT){
             theBall.changeDirection(0,-1);
+            theLives.RemoveLife();
         }
 
     }
